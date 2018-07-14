@@ -3,7 +3,7 @@
 
 Name:           python-keyrings-alt
 Version:        3.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Alternate keyring implementations for python-keyring
 
 # No license in archive nor in repo
@@ -91,6 +91,9 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %{python3_sitelib}/keyrings/__pycache__/__init__.cpython-*.pyc
 
 %changelog
+
+* Fri Jul 13 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 3.1-2
+- Rebuilt for Python 3.7
 
 * Mon Jul 02 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 3.1-1
 - Updated to 3.1
