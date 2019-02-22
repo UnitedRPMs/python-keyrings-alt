@@ -2,7 +2,7 @@
 %global modname %(n=%{srcname}; echo ${n//./-})
 
 Name:           python-keyrings-alt
-Version:        3.1
+Version:        3.1.1
 Release:        2%{?dist}
 Summary:        Alternate keyring implementations for python-keyring
 
@@ -23,17 +23,18 @@ package.
 %package -n python2-%{modname}
 Summary:        %{summary}
 %{?python_provide:%python_provide python2-%{modname}}
+BuildRequires:  python2
 BuildRequires:  python2-devel
 BuildRequires:  python2-setuptools
 BuildRequires:  python2-setuptools_scm
 BuildRequires:  python2-pytest
 BuildRequires:  python2-mock
-BuildRequires:  python-keyring
+BuildRequires:  python2-keyring
 BuildRequires:  python-gdata
-BuildRequires:  python-keyczar
+BuildRequires:  python2-keyczar
 BuildRequires:  python2-crypto
 Recommends:     python-gdata
-Recommends:     python-keyczar
+Recommends:     python2-keyczar
 Requires:       python2-crypto
 
 %description -n python2-%{modname} %{_description}
@@ -91,6 +92,9 @@ export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %{python3_sitelib}/keyrings/__pycache__/__init__.cpython-*.pyc
 
 %changelog
+
+* Tue Feb 19 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 3.1.1-2
+- Updated to 3.1.1
 
 * Fri Jul 13 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 3.1-2
 - Rebuilt for Python 3.7

@@ -3,5 +3,5 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
-keyrings.alt*.tar.gz
+*.tar.gz
 .directory
